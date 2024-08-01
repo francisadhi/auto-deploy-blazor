@@ -1,5 +1,5 @@
 [build]
-  command = "dotnet publish -c Release -o build"
+  command = "bundle install && jekyll build"  # Replace with your build command
   publish = "build"
 
 [build.environment]
