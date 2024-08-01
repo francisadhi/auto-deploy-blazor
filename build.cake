@@ -83,7 +83,7 @@ Task("Publish")
     .Does(() => {
 
      
-     var projects = GetFiles("./src/front/front.csproj");
+     var projects = GetFiles("./src/front/src.csproj");
      foreach(var project in projects )
      {
        var publishSettings = new DotNetPublishSettings  {
