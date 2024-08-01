@@ -1,0 +1,12 @@
+[build]
+  command = "dotnet publish -c Release -o build"
+  publish = "build/wwwroot"
+
+[build.environment]
+  NODE_VERSION = "16"  # Optional: specify the Node.js version if needed
+  DOTNET_ROOT = "/opt/buildhome/.dotnet"
+  PATH = "/opt/buildhome/.dotnet:$PATH"
+
+[[plugins]]
+  package = "netlify-plugin-dotnetcore"
+  inputs = { version = "7.0.x" }  # Specify your .NET version here
