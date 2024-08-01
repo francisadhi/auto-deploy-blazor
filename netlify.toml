@@ -1,5 +1,5 @@
 [build]
-  command = "bundle exec jekyll build" # Or your specific build command
+  command = "dotnet publish -c Release -o build"
   publish = "build/wwwroot"
 
 [build.environment]
