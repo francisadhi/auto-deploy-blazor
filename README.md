@@ -1,1 +1,1 @@
-# Halo 👋 , How to Deploy Blazor web assembly to netlify
+# Hi 👋 , How to Deploy Blazor web assembly to netlify
