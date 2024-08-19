@@ -16,7 +16,7 @@ function addIntegrityToFile(filePath) {
     const fileContent = fs.readFileSync(filePath, 'utf8');
     const regex = /<script\s+src="(.*?)"[^>]*><\/script>/g;
     const newFileContent = fileContent.replace(regex, (match, p1) => {
-        const filePath = path.join(__dirname, 'wwwroot', p1);
+        const filePath = path.join(__dirname, 'release', 'wwwroot', p1);
         const integrityHash = computeSHA256(filePath);
         return match.replace('<script', `<script integrity="sha256-${integrityHash}" crossorigin="anonymous"`);
     });
@@ -25,7 +25,7 @@ function addIntegrityToFile(filePath) {
 }
 
 // Path to your index.html
-const indexPath = path.join(__dirname, 'wwwroot', 'index.html');
+const indexPath = path.join(__dirname, 'release', 'wwwroot', 'index.html');
 
 // Add integrity attribute
 addIntegrityToFile(indexPath);
