@@ -1,6 +1,6 @@
 [build]
   publish = "build/wwwroot"
-  command = "dotnet publish -c Release -o build && node compute-sha256.js"
+  command = "dotnet publish -c Release -o release && node compute-sha256.js"
 
 [[redirects]]
   from = "/*"

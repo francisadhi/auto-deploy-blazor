@@ -23,7 +23,7 @@ jobs:
         run: dotnet restore
 
       - name: Build
-        run: dotnet publish -c Release -o build --nologo --verbosity normal
+        run: dotnet publish -c Release -o release --nologo --verbosity normal
 
       - name: Compute SHA-256 hashes
         run: node compute-sha256.js
